@@ -24,9 +24,11 @@ const Cart = (): JSX.Element => {
     // TODO
     ...product,
     priceFormatted: formatPrice(product.price),
-    SubTotal: formatPrice(product.price *= product.amount)
+    SubTotal: formatPrice(product.price * product.amount)
 
   }))
+
+
 
   const total =
     formatPrice(
@@ -121,7 +123,7 @@ const Cart = (): JSX.Element => {
 
         <Total>
           <span>TOTAL</span>
-          <strong>R$ 359,80</strong>
+          <strong>{total}</strong>
         </Total>
       </footer>
     </Container>
